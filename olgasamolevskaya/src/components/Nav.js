@@ -1,23 +1,21 @@
 //import logo from "../images/plm-logo.jpg";
+import React, { Component } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
-  //const navigate = useNavigate();
-  //return (
-  // <nav>
-  //   <div className="logo-container">
-  //     <img src="logo" alt="logo" />
-  //   </div>
-  //   <div className="controls">
-  //     <div className="icon" onClick={() => navigate("/ticket")}>
-  //       +
-  //     </div>
-  //     <div className="icon" onClick={() => navigate("/")}>
-  //       home
-  //     </div>
-  //   </div>
-  // </nav>
-  //)
+  const navigate = useNavigate();
+  return (
+    <nav>
+      <div className="controls">
+        <div className="icon" onClick={() => navigate("/Content")}>
+          +
+        </div>
+        <div className="icon" onClick={() => navigate("/")}>
+          home
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Nav;
