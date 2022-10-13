@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -12,7 +12,7 @@ const App = () => {
     <>
       <div className="app">
         <BrowserRouter>
-          <Nav />
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
