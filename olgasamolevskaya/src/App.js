@@ -14,8 +14,8 @@ const App = () => {
         <Navigation />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/Контакти" element={<Contact />} />
-          <Route path="/About" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </div>
     </>

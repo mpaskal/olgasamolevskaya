@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -20,9 +19,7 @@ function Navigation() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} href={"/"}>
-                Початок
-              </Nav.Link>
+              <Nav.Link href={"/"}>Початок</Nav.Link>
               <NavDropdown title="Фільми" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#movie1">Фільми</NavDropdown.Item>
                 <NavDropdown.Item href="#movie2">Вірші</NavDropdown.Item>
@@ -48,9 +45,7 @@ function Navigation() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link as={Link} href={"/"}>
-                Контакти
-              </Nav.Link>
+              <Nav.Link href="/contact">Контакти</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
