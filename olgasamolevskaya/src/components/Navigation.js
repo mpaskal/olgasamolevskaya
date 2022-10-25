@@ -10,16 +10,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function Navigation() {
   return (
     <Fragment>
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
+      <Navbar className="navbar" bg="light" variant="dark" expand="lg">
+        <Container fluid className="navigation">
           <Navbar.Brand href="#">Ольга Самолевская</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              // style={{ maxHeight: "100px" }}
-              //navbarScroll
-            >
+            <Nav className="me-auto my-2 my-lg-0">
               <Nav.Link href={"/"}>Початок</Nav.Link>
               <NavDropdown title="Фільми" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#movie1">Фільм1</NavDropdown.Item>
@@ -56,7 +51,7 @@ function Navigation() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Пошук</Button>
+              <Button variant="search">Пошук</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
