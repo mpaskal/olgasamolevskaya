@@ -1,4 +1,35 @@
 .app {
   font-family: sans-serif;
   text-align: center;
+  background-color: #D7D6AA;
+}
+
+.body-color {
+  background-color: rgb(222, 222, 29);
+}
+
+/*-- Navigation -- */
+.navigation {
+  background-color: #B84221;
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+}
+
+.btn-search {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #873119 !important;
+  --bs-btn-border-color: #873119 !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #642413;
+  --bs-btn-hover-border-color: #642413 !important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #642413;
+  --bs-btn-active-border-color: #642413;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #873119;
+  --bs-btn-disabled-border-color: #873119;
 }
