@@ -1,16 +1,26 @@
 .app {
   font-family: sans-serif;
   text-align: center;
-  background-color: #D7D6AA;
+  background-color: #a4986c;
 }
 
+/* -- Main -- */
 .body-color {
-  background-color: rgb(222, 222, 29);
+  background-color: #a4986c;
 }
 
-/*-- Navigation -- */
+.row-main {
+  margin-right: 0 !important;
+}
+
+.img-main {
+  max-height: 450px;
+  width: auto; 
+}
+
+/* -- Navigation -- */
 .navigation {
-  background-color: #B84221;
+  background-color: #862800
 }
 
 .navbar {
@@ -18,18 +28,49 @@
 }
 
 .btn-search {
-  --bs-btn-color: #fff !important;
+  --bs-btn-color: #ced4da !important;
   --bs-btn-bg: #873119 !important;
   --bs-btn-border-color: #873119 !important;
-  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-color: white;
   --bs-btn-hover-bg: #642413;
   --bs-btn-hover-border-color: #642413 !important;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
+  --bs-btn-active-color: #white;
   --bs-btn-active-bg: #642413;
   --bs-btn-active-border-color: #642413;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-color: #ced4da;
   --bs-btn-disabled-bg: #873119;
   --bs-btn-disabled-border-color: #873119;
+}
+
+/* -- Footer -- */
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #d8d8d8;
+  background-color: #862800;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.singleCol {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.social-media-icons-white a {
+  color: white;
+  font-size: 2rem;
+}
+
+.social-media-icons-white a:hover {
+  color: rgb(167, 167, 167);
+  font-size: 2rem;
+}
+
+.social-media-icons-white a::after {
+  color: rgb(167, 167, 167);
+  font-size: 2rem;
 }

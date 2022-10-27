@@ -8,40 +8,18 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Navigation() {
+  //const stopClickPropagation = (event) => event.stopPropagation();
   return (
     <Fragment>
       <Navbar className="navbar" bg="light" variant="dark" expand="lg">
         <Container fluid className="navigation">
-          <Navbar.Brand href="#">Ольга Самолевская</Navbar.Brand>
-          <Navbar.Collapse id="navbarScroll">
+          <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
+          <Navbar.Toggle aria-controls="nav" />
+          <Navbar.Collapse id="nav">
             <Nav className="me-auto my-2 my-lg-0">
-              <Nav.Link href={"/"}>Початок</Nav.Link>
-              <NavDropdown title="Фільми" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#movie1">Фільм1</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#movie2">Фільм2</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#movie3">Фільм3</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#movie4">Фільм4</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#movie5">Фільм5</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Вiршi" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#poem1">Вiршi1</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#poem2">Вiршi2</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#poem3">Вiршi3</NavDropdown.Item>
-                <NavDropdown.Divider />
-              </NavDropdown>
-              <NavDropdown title="Статті" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#статті1">Статті1</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#статті2">Статті2</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#статті3">Статті3</NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/movies">Фільми</Nav.Link>
+              <Nav.Link href="/poems">Вiршi</Nav.Link>
+              <Nav.Link href="/articles">Статті</Nav.Link>
               <Nav.Link href="/contact">Контакти</Nav.Link>
             </Nav>
             <Form className="d-flex">
