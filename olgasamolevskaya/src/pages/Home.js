@@ -5,14 +5,14 @@ import Col from "react-bootstrap/Col";
 
 const Home = () => {
   return (
-    <Container fluid>
+    <Container fluid className="body-color">
       <h1 className="header">Ольга Самолевская</h1>
-      <section className="body-color">
+      <section>
         <Row style={{ marginLeft: "0" }}>
           <Col style={{ paddingLeft: "0" }} md={12} lg={4}>
             <img
               className="img-main"
-              src="images/Olga-main.jpg"
+              src="images/Olga-main2.jpg"
               alt="Olga Samolevskaya"
             />
           </Col>

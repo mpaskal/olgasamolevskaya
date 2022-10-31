@@ -2,11 +2,14 @@
   font-family: sans-serif;
   text-align: center;
   background-color: #a4986c;
+  height: 100vh;
 }
 
 /* -- Main -- */
 .body-color {
-  background-color: #a4986c;
+  background: url("/images/apples-on-ground.jpg") no-repeat fixed;
+  background-size: cover;
+  height: 85%;
 }
 
 .row-main {
@@ -14,8 +17,10 @@
 }
 
 .img-main {
-  max-height: 450px;
-  width: auto; 
+  height: 15rem;
+  width: 15rem; 
+      border-radius: 50%;
+      overflow: hidden;
 }
 
 /* -- Navigation -- */
@@ -46,7 +51,6 @@
 
 /* -- Footer -- */
 .footer {
-  margin-top: 1rem;
   padding: 1rem;
   color: #d8d8d8;
   background-color: #862800;
