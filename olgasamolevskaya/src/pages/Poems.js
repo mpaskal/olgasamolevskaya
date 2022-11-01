@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 const Poems = () => {
   return (
-    <Container className="p-3">
+    <Container fluid className="body-main">
       <h1 className="header">Poems</h1>
     </Container>
   );

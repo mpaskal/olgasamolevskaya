@@ -16,21 +16,12 @@ function Navigation() {
           <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
           <Navbar.Toggle aria-controls="nav" />
           <Navbar.Collapse id="nav">
-            <Nav className="me-auto my-2 my-lg-0">
+            <Nav className="ms-auto my-2 my-lg-3 nav-links">
               <Nav.Link href="/movies">Фільми</Nav.Link>
               <Nav.Link href="/poems">Вiршi</Nav.Link>
               <Nav.Link href="/articles">Статті</Nav.Link>
               <Nav.Link href="/contact">Контакти</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Пошук"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="search">Пошук</Button>
-            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

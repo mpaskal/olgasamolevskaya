@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 
 const Home = () => {
   return (
-    <Container fluid className="body-color">
+    <Container fluid className="body-main">
       <h1 className="header">Ольга Самолевская</h1>
       <section>
         <Row style={{ marginLeft: "0" }}>

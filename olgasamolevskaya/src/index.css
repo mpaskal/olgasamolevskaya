@@ -6,10 +6,10 @@
 }
 
 /* -- Main -- */
-.body-color {
+.body-main {
   background: url("/images/apples-on-ground.jpg") no-repeat fixed;
   background-size: cover;
-  height: 85%;
+  height: 80%;
 }
 
 .row-main {
@@ -31,6 +31,12 @@
 .navbar {
   padding-bottom: 0 !important;
 }
+ a.nav-link{
+  margin-left: 0.6rem;
+ }
+ .nav-links {
+   margin-right: 3rem;
+ }
 
 .btn-search {
   --bs-btn-color: #ced4da !important;

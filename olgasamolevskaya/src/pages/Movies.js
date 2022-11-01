@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 const Movies = () => {
   return (
     <>
-      <Container className="p-3">
+      <Container fluid className="body-main">
         <h1 className="header">Movies</h1>
       </Container>
     </>

@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 const Contact = () => {
   return (
-    <Container className="p-3">
+    <Container fluid className="body-main">
       <h1 className="header">Contact</h1>
     </Container>
   );
