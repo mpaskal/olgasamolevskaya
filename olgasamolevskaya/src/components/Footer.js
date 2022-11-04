@@ -21,7 +21,7 @@ function Footer(props) {
           <FontAwesomeIcon icon={faYoutube} />
         </a>
       </div>
-      <small>&copy; {props.year} LivenLab. All Rights Reserved</small>
+      <small>Copyright &copy; {props.year} LivenLab</small>
     </div>
   );
 }
