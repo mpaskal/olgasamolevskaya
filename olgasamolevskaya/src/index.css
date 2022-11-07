@@ -23,12 +23,26 @@
 
 .card-poems {
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.header-page {
+  color: rgb(241, 241, 241);
 }
 
 /* -- Navigation -- */
 .navigation {
-  background: linear-gradient(0deg,#D7DAC9, #a4986c, #ce3f01, #a33201,#862800);
+  background: linear-gradient(0deg, #D7DAC9,
+    #ce3f01,
+    #a33201,
+    #862800,
+    #862800,
+    #a33201,
+    #ce3f01,
+    #D7DAC9);
 }
 
 .navbar {
@@ -62,7 +76,7 @@
 .footer {
   padding: 1rem;
   color: #d8d8d8;
-  background: linear-gradient(0deg, #862800, #a33201, #ce3f01, #a4986c, #D7DAC9);
+  background: linear-gradient(0deg, #D7DAC9, #ce3f01, #a33201, #862800, #862800, #a33201, #ce3f01, #D7DAC9);
   bottom: 0;
   left: 0;
   width: 100%;
