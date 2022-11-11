@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useCallback, useMemo } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -8,17 +8,26 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Navigation() {
-  //const stopClickPropagation = (event) => event.stopPropagation();
   return (
     <Fragment>
-      <Navbar className="navbar" bg="light" variant="dark" expand="lg">
+      <Navbar
+        className="navbar sticky-top"
+        sticky
+        bg="light"
+        variant="dark"
+        expand="lg"
+      >
         <Container fluid className="navigation">
           <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
           <Navbar.Toggle aria-controls="nav" />
           <Navbar.Collapse id="nav">
             <Nav className="ms-auto my-2 my-lg-3 nav-links">
-              <Nav.Link href="/movies">Фільми</Nav.Link>
-              <Nav.Link href="/poems">Вiршi</Nav.Link>
+              <Nav.Link eventKey="Фільми" href="/movies">
+                Фільми
+              </Nav.Link>
+              <Nav.Link eventKey=" Вiршi" href="/poems">
+                Вiршi
+              </Nav.Link>
               <Nav.Link href="/articles">Статті</Nav.Link>
               <Nav.Link href="/contact">Контакти</Nav.Link>
             </Nav>

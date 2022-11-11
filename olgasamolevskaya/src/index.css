@@ -1,7 +1,6 @@
 .app {
   font-family: sans-serif;
   text-align: center;
-  height: 100vh;
 }
 
 /* -- Main -- */
@@ -21,6 +20,42 @@
       overflow: hidden;
 }
 
+/* -- Poems Page -- */
+.poems-header-row {
+  position: stiky;
+  top: 4rem;
+  background-size: cover;
+  background: url("/images/apples-on-ground.jpg") no-repeat fixed;
+  z-index: 3;
+}
+
+.poems-header {
+  color: rgb(241, 241, 241);
+}
+
+.poems-links {
+  text-align: left;
+  display: d-block;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.link {
+  color: white;
+}
+
+.links {
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+}
+
+.link:hover {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 .card-poems {
   display: flex;
   align-items: center;
@@ -29,8 +64,8 @@
   margin-bottom: 3rem;
 }
 
-.header-page {
-  color: rgb(241, 241, 241);
+.btn-back {
+ background: red;
 }
 
 /* -- Navigation -- */
