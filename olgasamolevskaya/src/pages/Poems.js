@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CardPoems from "../components/CardPoems";
+import Sidebar from "../components/Sidebar";
 
 const Poems = () => {
+  const [navVisible, showNavbar] = useState(true);
   return (
-    <section>
-      <Container fluid className="body-main">
-        <Row className="header-row">
-          <h1 className="header poems-header">Вiршi</h1>
-        </Row>
+    <div>
+      <Sidebar visible={navVisible} show={showNavbar} />
+      <Container fluid>
         <Row id="schoolgirl">
           <Col sm="12" md="4" className="poems-links">
             <div className="links">
@@ -440,7 +440,7 @@ const Poems = () => {
           />
         </Row>
       </Container>
-    </section>
+    </div>
   );
 };
 

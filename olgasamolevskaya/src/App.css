@@ -1,0 +1,258 @@
+.app {  
+  text-align: center;
+  background: url("/images/apples-on-ground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll !important;
+  height: 100vh;
+}
+
+/* -- Main -- */
+.row-main {
+  margin-right: 0 !important;
+}
+
+.img-main {
+  height: 15rem;
+  width: 15rem; 
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* -- Poems Page -- */
+.poems-header {
+  color: rgb(241, 241, 241);
+}
+
+.poems-links {
+  text-align: left;
+  display: d-block;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.link {
+  color: white;
+}
+
+.links {
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+}
+
+.link:hover {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-poems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* -- Navigation -- */
+.nav-bar {
+  padding-bottom: 0 !important;
+   position: -webkit-sticky;
+  position: sticky !important;
+  top: 0;
+  background: linear-gradient(0deg, #D7DAC9,
+    #ce3f01,
+    #a33201,
+    #862800,
+    #862800,
+    #a33201,
+    #ce3f01,
+    #D7DAC9);
+  z-index: 3;
+}
+
+ a.navlink{
+  margin-left: 0.6rem;
+ }
+
+ .nav-links {
+   margin-right: 3rem;
+ }
+
+    .nav-link {
+      color: rgb(236, 236, 236) !important;
+      padding: 10px 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  
+    .nav-link.active {
+      color: red !important;
+    }
+
+.btn-search {
+  --bs-btn-color: #ced4da !important;
+  --bs-btn-bg: #873119 !important;
+  --bs-btn-border-color: #873119 !important;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #642413;
+  --bs-btn-hover-border-color: #642413 !important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #white;
+  --bs-btn-active-bg: #642413;
+  --bs-btn-active-border-color: #642413;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #ced4da;
+  --bs-btn-disabled-bg: #873119;
+  --bs-btn-disabled-border-color: #873119;
+}
+
+/* -- Sidebar -- */
+side {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+
+  width: 15%;
+  min-height: 100vh;
+  background-color: #a33201;
+  padding: 2rem 1 rem 1rem 1rem;
+  transition: transform 1s;
+}
+
+.sidebar {
+  transform: translateX(-100%);
+}
+
+.side-btn {
+  position: absolute;
+  transform: translateX(40px);
+  top: 20px;
+  right: 0;
+  width: 40px;
+  height: 60px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #753ffd;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 1rem;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.side-link:hover {
+  background-color: #AFB4FF;
+  color: #4E4E4E; 
+}
+
+.mobile-nav {
+  background-color: #753ffd;
+  width: 100%;
+  height: 40px;
+  display: none;
+}
+
+.mobile-nav-btn {
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-nav {
+      display: flex;
+      align-items: center;
+    }
+ side {
+  width: 40%;
+  padding: 10px;
+ }
+}
+@media only screen and (max-width: 450px) {
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+  }
+  side {
+    width: 70%;
+    top: 38px;
+    min-height: calc(100vh-38px);
+  }
+
+  .side-btn {
+    display: none;
+  }
+}
+
+.page {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: margin-left 1s;
+}
+
+.page-with-navbar {
+  margin-left: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-with-navbar {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* -- Footer -- */
+.footer {
+  padding: 1rem;
+  color: #d8d8d8;
+  background: linear-gradient(0deg, #D7DAC9, #ce3f01, #a33201, #862800, #862800, #a33201, #ce3f01, #D7DAC9);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.singleCol {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.social-media-icons-white a {
+  color: white;
+  font-size: 2rem;
+}
+
+.social-media-icons-white a:hover {
+  color: rgb(167, 167, 167);
+  font-size: 2rem;
+}
+
+.social-media-icons-white a::after {
+  color: rgb(167, 167, 167);
+  font-size: 2rem;
+}
