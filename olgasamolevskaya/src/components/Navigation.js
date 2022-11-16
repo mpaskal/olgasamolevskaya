@@ -1,9 +1,10 @@
 import React, { Fragment, useState, useCallback, useMemo } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { FaBars } from "react-icons/fa";
 import "../App.css";
 
-const Navigation = () => {
+const Navigation = ({ visible, show }) => {
   return (
     <Navbar
       collapseOnSelect
@@ -16,7 +17,7 @@ const Navigation = () => {
         <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto my-2 my-lg-2 nav-links">
+          <Nav className="ms-auto my-1 my-lg-2">
             <Link className="nav-link" to="/movies">
               Фільми
             </Link>

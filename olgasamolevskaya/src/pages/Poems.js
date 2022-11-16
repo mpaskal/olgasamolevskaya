@@ -10,102 +10,42 @@ import Sidebar from "../components/Sidebar";
 const Poems = () => {
   const [navVisible, showNavbar] = useState(true);
   return (
-    <div>
+    <>
       <Sidebar visible={navVisible} show={showNavbar} />
-      <Container fluid>
-        <Row id="schoolgirl">
-          <Col sm="12" md="4" className="poems-links">
-            <div className="links">
-              <Link to="#schoolgirl" className="link">
-                ШКОЛЬНИЦА
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#landscape" className="link">
-                ТАКОЙ ПЕЙЗАЖ
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#ikar" className="link">
-                ПАДЕНИЕ ИКАРА
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#boundless" className="link">
-                O, безбрежная беспутная Россия!
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#suddenly" className="link">
-                Вдруг остановишься средь суетливого города
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#washed" className="link">
-                Умытый маем мир
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#mid" className="link">
-                Средь города
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#walked" className="link">
-                Шла по линии прибоя
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#holdingon" className="link">
-                Держится кружение Земли
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#girl" className="link">
-                Девочка на шаре
-              </Link>
-            </div>
-            <div className="links">
-              <Link to="#russian" className="link">
-                О, русский, верь: зайдёт она
-              </Link>
-            </div>
-          </Col>
-          <Col sm="12" md="4" className="card-poems">
-            <CardPoems
-              title="ШКОЛЬНИЦА"
-              text={
-                <>
-                  Красоты и мечтаний полна,
-                  <br />
-                  в новой блузе из белого ситца,
-                  <br />
-                  ты глядишь, как играет волна, <br />
-                  как вода на ладони искрится, <br />
-                  как туман над Десною клубится, <br />
-                  будто сходит c реки пелена, <br />
-                  как полуденный воздух струится, <br />
-                  как трава на лугу зелена, <br />
-                  как в полёт собираються птицы, <br />
-                  чтоб весною опять возвратиться...
-                  <br />
-                  <br />
-                  Ты стараешься лучше учиться – <br />
-                  подтянуть иностранный должна! <br /> Ты учила: во Франции –
-                  Ницца, <br /> а Россия – большая страна… <br />
-                  <br />
-                  Но не мог этот ужас присниться! <br /> Но россии уже не
-                  простится, <br /> что зимою начнётся война, <br /> а за нею –
-                  шальная весна, <br /> что спасаться народ устремится, <br /> и
-                  затопчут тебя на границе. <br /> На границе твоих восемна…"{" "}
-                  <br />
-                </>
-              }
-            />
-          </Col>
-          <Col sm="12" md="4"></Col>
-        </Row>
-        <Row className="card-poems" id="landscape">
+      <div>
+        <div className="card-poems" id="schoolgirl">
+          <CardPoems
+            title="ШКОЛЬНИЦА"
+            text={
+              <>
+                Красоты и мечтаний полна,
+                <br />
+                в новой блузе из белого ситца,
+                <br />
+                ты глядишь, как играет волна, <br />
+                как вода на ладони искрится, <br />
+                как туман над Десною клубится, <br />
+                будто сходит c реки пелена, <br />
+                как полуденный воздух струится, <br />
+                как трава на лугу зелена, <br />
+                как в полёт собираються птицы, <br />
+                чтоб весною опять возвратиться...
+                <br />
+                <br />
+                Ты стараешься лучше учиться – <br />
+                подтянуть иностранный должна! <br /> Ты учила: во Франции –
+                Ницца, <br /> а Россия – большая страна… <br />
+                <br />
+                Но не мог этот ужас присниться! <br /> Но россии уже не
+                простится, <br /> что зимою начнётся война, <br /> а за нею –
+                шальная весна, <br /> что спасаться народ устремится, <br /> и
+                затопчут тебя на границе. <br /> На границе твоих восемна…"{" "}
+                <br />
+              </>
+            }
+          />
+        </div>
+        <div className="card-poems" id="landscape">
           <CardPoems
             title="ТАКОЙ ПЕЙЗАЖ"
             text={
@@ -171,8 +111,8 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="ikar">
+        </div>
+        <div className="card-poems" id="ikar">
           <CardPoems
             title="ПАДЕНИЕ ИКАРА"
             text={
@@ -215,9 +155,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="boundless">
+        </div>
+        <div className="card-poems" id="boundless">
           <CardPoems
+            title="* * *"
             text={
               <>
                 О, безбрежная беспутная Россия! <br />
@@ -240,9 +181,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="suddenly">
+        </div>
+        <div className="card-poems" id="suddenly">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Вдруг остановишься средь суетливого города, <br />
@@ -255,9 +197,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="washed">
+        </div>
+        <div className="card-poems" id="washed">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Умытый маем мир. <br />
@@ -289,9 +232,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="mid">
+        </div>
+        <div className="card-poems" id="mid">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Средь города, <br />
@@ -314,9 +258,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="walked">
+        </div>
+        <div className="card-poems" id="walked">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Шла по линии прибоя <br />
@@ -339,9 +284,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="holdingon">
+        </div>
+        <div className="card-poems" id="holdingon">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Держится кружение Земли <br />
@@ -364,9 +310,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="girl">
+        </div>
+        <div className="card-poems" id="girl">
           <CardPoems
+            title="* * *"
             text={
               <>
                 Девочка на шаре - <br />
@@ -387,9 +334,10 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-        <Row className="card-poems" id="russian">
+        </div>
+        <div className="card-poems" id="russian">
           <CardPoems
+            title="* * *"
             text={
               <>
                 О, русский, верь: зайдёт она, <br />
@@ -438,9 +386,9 @@ const Poems = () => {
               </>
             }
           />
-        </Row>
-      </Container>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 
