@@ -1,8 +1,6 @@
 import React, { Fragment, useState, useCallback, useMemo } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { FaBars } from "react-icons/fa";
-import "../App.css";
 
 const Navigation = ({ visible, show }) => {
   return (
@@ -14,22 +12,34 @@ const Navigation = ({ visible, show }) => {
       bg="dark"
     >
       <Container>
-        <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
+        <img
+          className="logo-img"
+          src="images/Olga-main2.jpg"
+          alt="Olga Samolevskaya"
+        />
+        <NavLink className="nav-link" end to="/">
+          <Navbar.Brand className="logo-link">
+            <h3 className="logo-text">Ольга Самолевська</h3>
+          </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto my-1 my-lg-2">
-            <Link className="nav-link" to="/movies">
+            <NavLink className="nav-link" to="/movies">
               Фільми
-            </Link>
-            <Link className="nav-link" to="/poems">
+            </NavLink>
+            <NavLink className="nav-link" to="/poems">
               Вiршi
-            </Link>
-            <Link className="nav-link" to="/articles">
+            </NavLink>
+            <NavLink className="nav-link" to="/poemsrus">
+              Стихи
+            </NavLink>
+            <NavLink className="nav-link" to="/articles">
               Статті
-            </Link>
-            <Link className="nav-link" to="/contact">
+            </NavLink>
+            <NavLink className="nav-link" to="/contact">
               Контакти
-            </Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/SidePoems";
 import Home from "./pages/Home";
 import Poems from "./pages/Poems";
+import PoemsRus from "./pages/PoemsRus";
 import Movies from "./pages/Movies";
 import Articles from "./pages/Articles";
 import Contact from "./pages/Contact";
@@ -27,19 +28,16 @@ const App = () => {
             </div>
           }
         />
+        <Route
+          path="poemsrus"
+          element={
+            <div className={!navVisible ? "page" : "page page-with-navbar"}>
+              <PoemsRus />
+            </div>
+          }
+        />
         <Route path="articles" element={<Articles />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="poems/#schoolgirl" element={<Poems />} />
-        <Route path="poems/#landscape" element={<Poems />} />
-        <Route path="poems/#ikar" element={<Poems />} />
-        <Route path="poems/#boundless" element={<Poems />} />
-        <Route path="poems/#suddenly" element={<Poems />} />
-        <Route path="poems/#washed" element={<Poems />} />
-        <Route path="poems/#mid" element={<Poems />} />
-        <Route path="poems/#walked" element={<Poems />} />
-        <Route path="poems/#holdingon" element={<Poems />} />
-        <Route path="poems/#girl" element={<Poems />} />
-        <Route path="poems/#russian" element={<Poems />} />
       </Routes>
       <Footer year={new Date().getFullYear()} />
     </div>

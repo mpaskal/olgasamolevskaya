@@ -12,7 +12,7 @@ function CardPoems(props) {
           style={{ width: "100%" }}
           className="card-poems card-nav"
         >
-          <Card.Header>{props.title}</Card.Header>
+          <Card.Header className="poems-title">{props.title}</Card.Header>
           <Card.Body>
             <Card.Text>{props.text}</Card.Text>
           </Card.Body>

@@ -1,13 +1,12 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { NavLink } from "react-router-dom";
 import { FaAngleRight, FaAngleLeft, FaBars } from "react-icons/fa";
 
-function Sidebar({ visible, show }) {
+function SidePoems({ visible, show }) {
   return (
     <>
       <div className={visible ? "side-row" : "side-row side-row-move"}>
-        <span className="poems-content">Зміст</span>
+        <span className="poems-content">ЗМIСТ</span>
         <button
           className={visible ? "side-btn" : "side-btn side-btn-move"}
           type="button"
@@ -19,13 +18,13 @@ function Sidebar({ visible, show }) {
       <div className={visible ? "side-links" : "side-links side-links-move"}>
         <div className="side-links">
           <Link to="#schoolgirl" className="side-link">
-            <span>ШКОЛЬНИЦА</span>
+            <span>Школьница</span>
           </Link>
           <Link to="#landscape" className="side-link">
-            <span>ТАКОЙ ПЕЙЗАЖ</span>
+            <span>Такой пейзаж</span>
           </Link>
           <Link to="#ikar" className="side-link">
-            <span>ПАДЕНИЕ ИКАРА</span>
+            <span>Падение Икара</span>
           </Link>
           <Link to="#boundless" className="side-link">
             <span>O, безбрежная беспутная Россия!</span>
@@ -57,4 +56,4 @@ function Sidebar({ visible, show }) {
   );
 }
 
-export default Sidebar;
+export default SidePoems;
