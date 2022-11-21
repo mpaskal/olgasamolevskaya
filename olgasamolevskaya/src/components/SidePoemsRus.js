@@ -1,6 +1,5 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import Container from "react-bootstrap/Container";
 import { FaAngleRight, FaAngleLeft, FaBars } from "react-icons/fa";
 
 function SidePoemsRus({ visible, show }) {

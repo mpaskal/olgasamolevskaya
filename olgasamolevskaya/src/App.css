@@ -1,6 +1,6 @@
 .app {  
   text-align: center;
-  background: url("/images/apples-on-ground.jpg");
+  background: url("./assets/images/apples-on-ground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -27,7 +27,7 @@
 
 /* -- Poems Page -- */
 .poems-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -54,9 +54,8 @@
   font-weight: 700;
 }
 
-.cards-poems {
-  display: flex;
-  align-self: baseline;
+.card-nav {
+  margin-left: 40%;
 }
 
 .card-poems {
@@ -111,19 +110,19 @@
   margin-bottom: 0;
 }
 
- .navbar-toggler-icon {
+.navbar-toggler-icon {
   width: 1em;
   height: 1em;
- }
+}
 
- .nav-main-link.active {
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background: #a33201 !important;
- }
+.nav-main-link.active {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #a33201 !important;
+}
 
 .nav-link {
   color: rgb(236, 236, 236) !important;
@@ -179,14 +178,14 @@
 
 .side-row {
   position: fixed;
-  top: 3.3rem;
+  top: 5rem;
   left: 0;
   display: flex;
   flex-direction: column;
   width: 38%;
   height: 2.4rem;
   transition: transform .1s;
-  background-color: #a33201;
+  background-color: red;
   z-index: 5;
 }
 
@@ -207,7 +206,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a33201;
+  background-color: blue;
   outline: none;
   border: none;
   font-size: 1rem;
@@ -223,18 +222,17 @@
 }
 
 .side-links {
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  top: 7.5rem;
   left: 0;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 100hv;
-  background-color: #a33201;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
+  width: 40%;
+  height: 85vh;
+  background-color: yellow;
+  padding: 1rem 1rem 3.5rem 1rem;
+  overflow: auto;
   transition: transform .1s;
-  overflow: auto !important;
   z-index: 5;
 }
 
@@ -266,12 +264,11 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: 100vh;
+    height: 85vh;
     background-color: #a33201;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
+    padding: 1rem 1rem 3.5rem 1rem;
+    overflow: auto;
     transition: transform .1s;
-    overflow: auto !important;
     z-index: 5;
   }
 
@@ -321,19 +318,17 @@
 
 @media (min-width: 768px) {
   .side-links {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 6.1rem;
     left: 0;
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 100%;
+    height: 85vh;
     background-color: #a33201;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
+    padding: 1rem 1rem 3.5rem 1rem;
+    overflow: auto;
     transition: transform .1s;
-    overflow: auto !important;
     z-index: 5;
   }
     
@@ -373,22 +368,25 @@
     transition: transform .1s;
     z-index: 5;
   }
+
+  .card-nav {
+    margin-left: 25%;
+  }
 }
 
 @media (min-width: 992px) {
   .side-links {
-    position: sticky;
+    position: fixed;
     top: 7.8rem;
     left: 0;
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 100vh;
+    height: 85vh;
     background-color: #a33201;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
+    padding: 1rem 1rem 3.5rem 1rem;
+    overflow: auto;
     transition: transform .1s;
-    overflow: auto !important;
     z-index: 5;
   }
   
@@ -428,23 +426,20 @@
     transition: transform .1s;
     z-index: 5;
   }
-
-  .card-poems {
-    max-width: 40%;
-  }
 }
 
 @media (min-width: 1200px) {
   .side-links {
-    position: sticky;
+    position: fixed;
     top: 7.8rem;
     left: 0;
     display: flex;
     flex-direction: column;
     width: 18%;
-    height: 100%;
+    height: 85vh;
     background-color: #a33201;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 3.5rem 1rem;
+    overflow: auto;
     transition: transform .1s;
     z-index: 5;
   }
@@ -484,10 +479,6 @@
     color: #fff;
     transition: transform .1s;
     z-index: 5;
-  }
-
-  .card-poems {
-      max-width: 38%;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useCallback, useMemo } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import ImageOlgaLogo from "../assets/images/Olga-main2.jpg";
 
 const Navigation = ({ visible, show }) => {
   return (
@@ -12,11 +13,7 @@ const Navigation = ({ visible, show }) => {
       bg="dark"
     >
       <Container>
-        <img
-          className="logo-img"
-          src="images/Olga-main2.jpg"
-          alt="Olga Samolevskaya"
-        />
+        <img className="logo-img" src={ImageOlgaLogo} alt="Olga Samolevskaya" />
         <NavLink className="nav-link" end to="/">
           <Navbar.Brand className="logo-link">
             <h3 className="logo-text">Ольга Самолевська</h3>

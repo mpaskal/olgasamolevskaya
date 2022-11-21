@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ImageOlgaMain from "../assets/images/Olga-main2.jpg";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
           <Col style={{ paddingLeft: "0" }} md={12} lg={4}>
             <img
               className="img-main"
-              src="images/Olga-main2.jpg"
+              src={ImageOlgaMain}
               alt="Olga Samolevskaya"
             />
           </Col>
