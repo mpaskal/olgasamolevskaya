@@ -29,7 +29,7 @@ const App = () => {
           }
         />
         <Route
-          path="poemsrus"
+          path="/poemsrus"
           element={
             <div className={!navVisible ? "page" : "page page-with-navbar"}>
               <PoemsRus />

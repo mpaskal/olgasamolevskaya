@@ -10,7 +10,6 @@ function CardPoems(props) {
           key={variant}
           text={variant.toLowerCase() === "light" ? "dark" : "white"}
           style={{ width: "100%" }}
-          className="card-poems card-nav"
         >
           <Card.Header className="poems-title">{props.title}</Card.Header>
           <Card.Body>
