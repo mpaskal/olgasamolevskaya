@@ -13,19 +13,13 @@ const PoemsRus = () => {
   return (
     <>
       <SidePoemsRus visible={navVisible} show={showNavbar} />
-      <Container>
-        <Row>
-          <Col xs="1" md="2" lg="3"></Col>
-          <Col xs="10" md="8" lg="6">
-            {poemsrusdata.map((poemrus, index) => (
-              <div key={index} className="card-poems" id={poemrus.id}>
-                <CardPoems title={poemrus.name} text={poemrus.text} />
-              </div>
-            ))}
-          </Col>
-          <Col xs="1" md="2" lg="3"></Col>
-        </Row>
-      </Container>
+      <section className="poems-rus-main">
+        {poemsrusdata.map((poemrus, index) => (
+          <div key={index} className="card-poems" id={poemrus.id}>
+            <CardPoems title={poemrus.name} text={poemrus.text} />
+          </div>
+        ))}
+      </section>
     </>
   );
 };

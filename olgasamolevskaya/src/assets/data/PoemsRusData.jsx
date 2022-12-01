@@ -29,8 +29,7 @@ const PoemsRusData = [
           шальная весна, <br /> что спасаться народ устремится, <br /> и
           затопчут тебя на границе. <br /> На границе твоих восемна…"
           <br /></div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Такой пейзаж",
@@ -95,8 +94,7 @@ const PoemsRusData = [
           Такой пейзаж...
           <br />
           Такой пейзаж.</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Падение Икара",
@@ -138,8 +136,7 @@ const PoemsRusData = [
                 <br />
                 над рекой - чей-то голос певучий... <br />
                 ...И разбилось лишь сердце моё…</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
 
   {
@@ -158,14 +155,13 @@ const PoemsRusData = [
                 <br />
                 Что ей вой материнский за гробами? <br />
                 <br />
-                Безразмерная бездушная Россия, <br />
+                Безразмерная бездушнNavLinkая Россия, <br />
                 оставаясь всё такой же агрессивной,
                 <br />
                 дурит свой народ легко и постоянно,
                 <br />
                 продолжая оставаться Чекистаном… </div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Вдруг остановишься средь суетливого города",
@@ -179,8 +175,7 @@ const PoemsRusData = [
       то ли ловя золотых облаков очертания, <br />
       то ли потерянный путь свой сверяя пО небу, <br />
       то ли стремясь не разлить своё горюшко тайное…</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Умытый маем мир",
@@ -213,8 +208,7 @@ const PoemsRusData = [
                 военный этот май. <br />
                 Роскошная сирень <br />
                 дрожит под вой сирен.</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Средь города",
@@ -238,8 +232,7 @@ const PoemsRusData = [
                 в инфантильности, <br />
                 стараясь - играя и балуясь - <br />
                 от этого света избавиться...</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Шла по линии прибоя",
@@ -263,8 +256,7 @@ const PoemsRusData = [
                 между вечным и мгновенным, <br />
                 между миром и войною <br />
                 шла по лезвию.</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Держится кружение Земли",
@@ -288,8 +280,7 @@ const PoemsRusData = [
                 И наполняют их слезами. <br />
                 Наполняют их слезами, <br />
                 берегущими земную ось.</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "Девочка на шаре",
@@ -311,8 +302,7 @@ const PoemsRusData = [
                 на летящем шаре, <br />
                 на великом шаре <br />
                 продержись, пожалуйста…</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
   {
     title: "О, русский, верь: зайдёт она",
@@ -362,8 +352,7 @@ const PoemsRusData = [
                 на глазу Земли бельмо - <br />
                 <br />
                 за попранное NEVER MORE!</div>,
-    poemsRusLink: "side-link",
-    poemsRusLinkText: "side-link-text",
+    poemsRusLink: "sidebar__link",
   },
 ];
 

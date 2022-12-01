@@ -8,21 +8,26 @@ function SidePoemsRus({ visible, show }) {
   return (
     <>
       <section
-        className={visible ? "side-links" : "side-links side-links-move"}
+        className={
+          visible ? "sidebar__links" : "sidebar__links sidebar__links--move"
+        }
       >
-        <span className="poems-content">Содержание</span>
-        <hr className="sidebar-line" />
-        {poemsrusdata.map((item, index) => {
-          return (
-            <Link key={index} to={item.path} className={item.poemsRusLink}>
-              {item.title}
-            </Link>
-          );
-        })}
+        <div className="poems__list__title">Содержание</div>
+        <div className="poems__list">
+          {poemsrusdata.map((item, index) => {
+            return (
+              <Link key={index} to={item.path} className={item.poemsRusLink}>
+                {item.title}
+              </Link>
+            );
+          })}
+        </div>
       </section>
       <section>
         <button
-          className={visible ? "sidebar-btn" : "sidebar-btn sidebar-btn-move"}
+          className={
+            visible ? "sidebar__btn" : "sidebar__btn sidebar__btn--move"
+          }
           type="button"
           onClick={() => show(!visible)}
         >
