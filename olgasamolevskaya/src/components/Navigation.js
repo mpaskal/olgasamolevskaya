@@ -1,33 +1,47 @@
-import React, { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import React, { Fragment, useState, useCallback, useMemo } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import ImageOlgaLogo from "../assets/images/Olga-main2.jpg";
 
-function Navigation() {
-  //const stopClickPropagation = (event) => event.stopPropagation();
+const Navigation = ({ visible, show }) => {
   return (
-    <Fragment>
-      <Navbar className="navbar" bg="light" variant="dark" expand="lg">
-        <Container fluid className="navigation">
-          <Navbar.Brand href="/">Ольга Самолевская</Navbar.Brand>
-          <Navbar.Toggle aria-controls="nav" />
-          <Navbar.Collapse id="nav">
-            <Nav className="ms-auto my-2 my-lg-3 nav-links">
-              <Nav.Link href="/movies">Фільми</Nav.Link>
-              <Nav.Link href="/poems">Вiршi</Nav.Link>
-              <Nav.Link href="/articles">Статті</Nav.Link>
-              <Nav.Link href="/contact">Контакти</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Outlet />
-    </Fragment>
+    <Navbar
+      collapseOnSelect
+      className="nav-bar"
+      expand="lg"
+      variant="dark"
+      bg="dark"
+    >
+      <Container>
+        <img className="logo-img" src={ImageOlgaLogo} alt="Olga Samolevskaya" />
+        <NavLink className="nav-link" end to="/">
+          <Navbar.Brand className="logo-link">
+            <h3 className="logo-text">Ольга Самолевська</h3>
+          </Navbar.Brand>
+        </NavLink>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto my-1 my-lg-2">
+            <NavLink className="nav-link" to="/movies">
+              Фільми
+            </NavLink>
+            <NavLink className="nav-link" to="/poems">
+              Вiршi
+            </NavLink>
+            <NavLink className="nav-link" to="/poemsrus">
+              Стихи
+            </NavLink>
+            <NavLink className="nav-link" to="/articles">
+              Статті
+            </NavLink>
+            <NavLink className="nav-link" to="/contact">
+              Контакти
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
+};
 
 export default Navigation;

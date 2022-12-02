@@ -9,11 +9,10 @@ function CardPoems(props) {
           bg={variant.toLowerCase()}
           key={variant}
           text={variant.toLowerCase() === "light" ? "dark" : "white"}
-          style={{ width: "24rem" }}
-          className="mb-2"
+          style={{ width: "100%" }}
         >
-          <Card.Header>{props.title}</Card.Header>
-          <Card.Body>
+          <Card.Header className="poems-title">{props.title}</Card.Header>
+          <Card.Body className="card__body">
             <Card.Text>{props.text}</Card.Text>
           </Card.Body>
         </Card>
