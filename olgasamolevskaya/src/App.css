@@ -1,3 +1,29 @@
+/* -- Keyframes -- */
+@keyframes fade-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* -- Main -- */
 .app {  
   text-align: center;
   background: url("./assets/images/apples-on-ground.jpg");
@@ -56,20 +82,21 @@
   background-color: #cb9d89 !important;
 }
 
-.poems-rus-main {
+.poems {
   position: relative;
+  height: 100%;
+  width: 90%;
 }
 
-.card-poems {
+.card-body {
+  padding-top: 50rem;
+}
+
+.card__poems {
   position: relative;
   display: flex;
-  margin-top: 1rem;
   padding-top: 5rem;
   font-size: 1.1rem;
-}
-
-.card-poems-move {
-  transform: translateX(35%)
 }
 
 /* -- Navigation -- */
@@ -97,6 +124,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin-right: 1.5rem;
+  animation: fade-in-from-top 0.5s;
  }
 
 .logo-link {
@@ -105,6 +133,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  animation: fade-in-from-top 0.5s;
 }
 
 .logo-text {
@@ -112,11 +141,13 @@
   color: white;
   height: auto;
   margin-bottom: 0;
+  animation: fade-in-from-top 0.5s;
 }
 
 .navbar-toggler-icon {
   width: 1em;
   height: 1em;
+  animation: fade-in-from-top 0.5s;
 }
 
 .nav-link {
@@ -128,6 +159,7 @@
   outline: none;
   font-size: 1rem;
   transition: all 0.4s;
+  animation: fade-in-from-top 0.5s;
 }
 
  .nav-link:hover {
@@ -196,6 +228,7 @@
 
 section.sidebar__links {
   padding-top: 0;
+  animation: fade-in-from-left 0.5s;
 }
 
  .sidebar__links {
@@ -208,7 +241,7 @@ section.sidebar__links {
    color: #fff;
    background-color: #a33201;
    padding: 1rem 0 0 1rem;
-   transition: transform .1s;
+   transition: transform .5s;
    z-index: 5;
  }
 
@@ -226,7 +259,8 @@ section.sidebar__links {
    border: none;
    cursor: pointer;
    color: #fff;
-   transition: transform .1s;
+   transition: transform .5s;
+   animation: fade-in-from-left 0.5s;
    z-index: 5;
  }
 
@@ -239,7 +273,7 @@ section.sidebar__links {
    width: 40px;
    height: 50px;
    background-color: #a33201;
-   transition: transform .1s;
+   transition: transform .5s;
    z-index: 2;
  }
 
@@ -247,23 +281,21 @@ section.sidebar__links {
   transform: translateX(-100%);
 }
 
- .card-nav {
-   margin-left: 0;
- }
-
 .sidebar__link { 
   text-decoration: none;
   outline: none;
   padding-left: 5px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding: 10px 5px 5px 5px;
   color: #fff !important;
   transition: all 0.2s;
 }
 
 .sidebar__link:hover {
   display: flex;
-  border-radius: 5px;  
+  border-radius: 5px; 
+  padding-left: 10px;
+  padding-right: 5px;
+  width: 90%;
   transform: scale(1.05);
   background-color: #cb9d89 !important;
 }
@@ -290,7 +322,7 @@ section.sidebar__links {
       color: #fff;
       background-color: #a33201;
       padding: 1rem 0 0 1rem;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -308,7 +340,7 @@ section.sidebar__links {
       border: none;
       cursor: pointer;
       color: #fff;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -321,13 +353,19 @@ section.sidebar__links {
       width: 40px;
       height: 50px;
       background-color: #a33201;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 2;
   }
 
   .page-with-navbar {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .poems__rus {
+    position: relative;
+    height: 100%;
+    width: 80%;
   }
 }
 
@@ -342,7 +380,7 @@ section.sidebar__links {
       color: #fff;
       background-color: #a33201;
       padding: 1rem 0 0 1rem;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -360,7 +398,7 @@ section.sidebar__links {
       border: none;
       cursor: pointer;
       color: #fff;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -373,19 +411,21 @@ section.sidebar__links {
       width: 40px;
       height: 50px;
       background-color: #a33201;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 2;
   }
-
- .card-nav {
-   margin-left: 0;
- }
 
   .logo-img {
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 50%;
     margin-right: 1.5rem;
+  }
+
+  .poems__rus {
+    position: relative;
+    height: 100%;
+    width: 70%;
   }
 }
 
@@ -400,7 +440,7 @@ section.sidebar__links {
       color: #fff;
       background-color: #a33201;
       padding: 1rem 0 0 1rem;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -418,7 +458,7 @@ section.sidebar__links {
       border: none;
       cursor: pointer;
       color: #fff;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 5;
     }
   
@@ -431,7 +471,7 @@ section.sidebar__links {
       width: 40px;
       height: 50px;
       background-color: #a33201;
-      transition: transform .1s;
+      transition: transform .5s;
       z-index: 2;
   }
 
@@ -440,6 +480,12 @@ section.sidebar__links {
     width: 4rem;
     border-radius: 50%;
     margin-right: 1.5rem;
+  }
+
+  .poems__rus {
+    position: relative;
+    height: 100%;
+    width: 50%;
   }
 }
 
@@ -454,7 +500,7 @@ section.sidebar__links {
     color: #fff;
     background-color: #a33201;
     padding: 1rem 0 0 1rem;
-    transition: transform .1s;
+    transition: transform .5s;
     z-index: 5;
   }
 
@@ -472,7 +518,7 @@ section.sidebar__links {
     border: none;
     cursor: pointer;      
     color: #fff;
-    transition: transform .1s;
+    transition: transform .5s;
     z-index: 5;
   }
 
@@ -485,7 +531,7 @@ section.sidebar__links {
     width: 40px;
     height: 50px;
     background-color: #a33201;
-    transition: transform .1s;
+    transition: transform .5s;
     z-index: 2;
   }
     
@@ -494,6 +540,12 @@ section.sidebar__links {
     width: 4rem;
     border-radius: 50%;
     margin-right: 1.5rem;
+  }
+
+  .poems__rus {
+    position: relative;
+    height: 100%;
+    width: 40%;
   }
 }
 

@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { FaAngleRight, FaAngleLeft, FaBars } from "react-icons/fa";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import poemsrusdata from "../assets/data/PoemsRusData";
 
-function SidePoemsRus({ visible, show }) {
+function Sidebar(props) {
   return (
     <>
       <section
         className={
-          visible ? "sidebar__links" : "sidebar__links sidebar__links--move"
+          props.visible
+            ? "sidebar__links"
+            : "sidebar__links sidebar__links--move"
         }
       >
-        <div className="poems__list__title">Содержание</div>
+        <div className="poems__list__title">{props.sideTitle}</div>
         <div className="poems__list">
           {poemsrusdata.map((item, index) => {
             return (
@@ -26,16 +27,20 @@ function SidePoemsRus({ visible, show }) {
       <section>
         <button
           className={
-            visible ? "sidebar__btn" : "sidebar__btn sidebar__btn--move"
+            props.visible ? "sidebar__btn" : "sidebar__btn sidebar__btn--move"
           }
           type="button"
-          onClick={() => show(!visible)}
+          onClick={() => props.show(!props.visible)}
         >
-          {visible ? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
+          {props.visible ? (
+            <FaAngleRight size={30} />
+          ) : (
+            <FaAngleLeft size={30} />
+          )}
         </button>
       </section>
     </>
   );
 }
 
-export default SidePoemsRus;
+export default Sidebar;

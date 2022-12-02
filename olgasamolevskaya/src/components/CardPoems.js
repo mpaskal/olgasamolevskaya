@@ -12,7 +12,7 @@ function CardPoems(props) {
           style={{ width: "100%" }}
         >
           <Card.Header className="poems-title">{props.title}</Card.Header>
-          <Card.Body>
+          <Card.Body className="card__body">
             <Card.Text>{props.text}</Card.Text>
           </Card.Body>
         </Card>
