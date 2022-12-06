@@ -2,10 +2,10 @@ import React from "react";
 
 const PoemsRusData = [
   {
-    title: `Школьница`,
-    name: `Школьница`,
-    id: `schoolgirl`,
-    path: `/poemsrus/#schoolgirl`,
+    title: "Школьница",
+    name: "Школьница",
+    id: "schoolgirl",
+    path: "/poemsrus/#schoolgirl",
     text: <>Красоты и мечтаний полна,
           <br />
           в новой блузе из белого ситца,

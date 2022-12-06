@@ -2,10 +2,10 @@ import React from "react";
 
 const PoemsData = [
   {
-    title: `В цей ліс я ходила роками`,
-    name: `* * *`,
-    id: `forest`,
-    path: `/poems/#forest`,
+    title: "В цей ліс я ходила роками",
+    name: "* * *",
+    id: "forest",
+    path: "/poems/#forest",
     text: <>В цей ліс я ходила роками – <br />
           втішав мене років з п'яти, <br />
           й не можна до нього не йти – <br />
