@@ -1,7 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import poemsrusdata from "../assets/data/PoemsRusData";
 
 function Sidebar(props) {
   return (
@@ -15,9 +14,9 @@ function Sidebar(props) {
       >
         <div className="poems__list__title">{props.sideTitle}</div>
         <div className="poems__list">
-          {poemsrusdata.map((item, index) => {
+          {props.poemsdata.map((item, index) => {
             return (
-              <Link key={index} to={item.path} className={item.poemsRusLink}>
+              <Link key={index} to={item.path} className={item.poemsLink}>
                 {item.title}
               </Link>
             );
