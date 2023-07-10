@@ -1,4 +1,5 @@
-http://stand-with-ukraine.pp.ua/
+![image](https://github.com/mpaskal/olgasamolevskaya/assets/11684513/79223574-96f8-48e5-a729-6062e3916421)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
