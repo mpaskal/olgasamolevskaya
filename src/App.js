@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
-  const [navVisible, showNavbar] = useState(true);
+  const [navVisible, setNavVisible] = useState(true);
   return (
     <div className="app">
       <Navigation />

@@ -14,7 +14,7 @@ const getYears = (pagedata) => {
 };
 
 const Articles = () => {
-  const [navVisible, showNavbar] = useState(true);
+  const [navVisible, setNavVisible] = useState(true);
   const data = {
     sideTitle: "Статтi",
   };
@@ -23,7 +23,7 @@ const Articles = () => {
     <div className="articles">
       {/* <Sidebar
         visible={navVisible}
-        show={showNavbar}
+        show={setNavVisible}
         sideTitle={data.sideTitle}
         pagedata={pagedata}
       /> */}
