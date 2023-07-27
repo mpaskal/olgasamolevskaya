@@ -489,72 +489,13 @@ section.sidebar_links {
   display: flex;
   border-radius: 5px;
   font-weight: 600;
-  padding: 1px 12px 2px 7px;      
+     
   font-size: 1rem;
   color: #a33201 !important;
   background-color: #E0C9A6 !important;
 }
 
 @media (min-width: 576px) {
-  .sidebar_links {
-      position: fixed;
-      margin: 0 0 -80px 0;
-      text-align: left;
-      top: 3.8rem;
-      left: 0;
-      width: 270px;
-      height: auto;
-      color: #f4f0e8;
-      background-color: #a33201;
-      padding: 1rem 0 0 1rem;
-      transition: transform .5s;
-      z-index: 5;
-    }
-  
-    .sidebar_btn {
-      position: fixed;
-      top: 3.8rem;
-      left: 242px;
-      width: 28px;
-      height: 50px;
-      justify-content: center;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: #a33201;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      color: #f4f0e8;
-      transition: transform .5s;
-      z-index: 5;
-    }
-  
-    .sidebar_btn-move {
-      transform: translateX(-242px);
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 50px;
-      background-color: #a33201;
-      transition: transform .5s;
-      z-index: 2;
-  }
-
-  .page-with-navbar {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .poems__rus {
-    position: relative;
-    height: 100%;
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
   .sidebar_links {
       position: fixed;
       margin: 0 0 -80px 0;
