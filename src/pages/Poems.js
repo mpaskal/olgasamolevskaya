@@ -4,12 +4,16 @@ import Sidebar from "../components/Sidebar";
 import pagedata from "../assets/data/PoemsData";
 
 const Poems = () => {
+  let scroll = 0;
   const [isVisible, setVisibility] = useState(true);
   const data = {
     sideTitle: "Зміст",
   };
-  const [isClicked, setClicked] = useState(false);
- 
+  let [isClicked, setClicked] = useState(false);
+  function handleClick() {
+    setClicked("true");
+ }
+
   useEffect(() => {
     const handleWindowResize = () => {
       let width = window.innerWidth <= 1200;
@@ -28,7 +32,7 @@ const Poems = () => {
         visible={isVisible}
         show={setVisibility}
         sideTitle={data.sideTitle}
-        linkClicked={setClicked}
+        linkClicked={handleClick}
         pagedata={pagedata}
       />
       <section className="poems_page">

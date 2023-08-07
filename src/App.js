@@ -8,7 +8,6 @@ import Movies from "./pages/Movies";
 import Articles from "./pages/Articles";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-
 import "./App.css";
 
 const App = () => {
@@ -18,9 +17,9 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies />} />
         <Route
-          path="poems/"
+          path="/poems"
           element={
             <div className={!navVisible ? "page" : "page page-with-navbar"}>
               <Poems />
@@ -28,15 +27,15 @@ const App = () => {
           }
         />
         <Route
-          path="poemsrus/"
+          path="/poemsrus"
           element={
             <div className={!navVisible ? "page" : "page page-with-navbar"}>
               <PoemsRus />
             </div>
           }
         />
-        <Route path="articles" element={<Articles />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer year={new Date().getFullYear()} />
     </div>

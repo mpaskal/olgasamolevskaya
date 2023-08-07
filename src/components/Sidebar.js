@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-function Sidebar(props) {
+const Sidebar = ({linkClicked, ...rest}) => {
 
   return (
     <>
       <section
         className={
-          props.visible ? "sidebar_links" : "sidebar_links sidebar_links:first-child"
+          rest.visible ? "sidebar_links" : "sidebar_links sidebar_links-move"
         }
       >
-        <div className="poems_list_title">{props.sideTitle}</div>
+        <div className="poems_list_title">{rest.sideTitle}</div>
         <div className="poems_list">
-          {props.pagedata.map((item, index) => {
+          {rest.pagedata.map((item, index) => {
             return (
-              <Link key={index} to={item.path} className={item.poemsLink}  onClick={() => props.linkClicked("true")}>
+              <Link key={index} to={item.path} className={item.poemsLink}  onClick={() => linkClicked()}>
                 {item.title} 
               </Link>
             );
@@ -25,12 +25,12 @@ function Sidebar(props) {
       <section>
         <button
           className={
-            props.visible ? "sidebar_btn" : "sidebar_btn sidebar_btn-move"
+          rest.visible ? "sidebar_btn" : "sidebar_btn sidebar_btn-move"
           }
           type="button"
-          onClick={() => props.show(!props.visible)}
+          onClick={() => rest.show(!rest.visible)}
         >
-          {props.visible ? (
+          {rest.visible ? (
             <FaAngleRight size={30} />
           ) : (
             <FaAngleLeft size={30} />

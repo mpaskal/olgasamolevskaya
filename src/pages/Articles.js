@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CardArticles from "../components/CardArticles";
-import Sidebar from "../components/Sidebar";
 import pagedata from "../assets/data/ArticlesData";
 
 const getYears = (pagedata) => {
@@ -21,12 +20,6 @@ const Articles = () => {
   const years = getYears(pagedata);
   return (
     <div className="articles">
-      {/* <Sidebar
-        visible={navVisible}
-        show={setNavVisible}
-        sideTitle={data.sideTitle}
-        pagedata={pagedata}
-      /> */}
       <section className="article_section">
         {years.map((publishedYear, index) => (
           <div key={index} className="article_year_section" id={index}>

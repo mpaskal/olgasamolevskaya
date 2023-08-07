@@ -106,6 +106,10 @@
   width: auto;
 }
 
+.poems_page {
+  margin-bottom: 2rem;
+}
+
 .card_poems {
   position: relative;
   display: flex;
@@ -117,7 +121,7 @@
   position: relative;
   display: flex;
   padding-top: 5.3rem;
-  margin-bottom: -4rem;
+  margin-bottom: -5rem;
   font-size: 1.1rem;
 }
 
@@ -773,10 +777,6 @@ section.sidebar_links {
         #f4f0e8);
   height: 90px;
   width: auto;
-}
-
-.copyright {
-  
 }
 
 .singleCol {
