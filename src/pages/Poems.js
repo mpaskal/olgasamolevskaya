@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import CardPoems from "../components/CardPoems";
 import Sidebar from "../components/Sidebar";
 import pagedata from "../assets/data/PoemsData";
-// import debounce from "../../helpers/debounce"
 
 const Poems = () => {
   const [isVisible, setVisibility] = useState(true);
   const data = {
     sideTitle: "Зміст",
   };
-
+  const [isClicked, setClicked] = useState(false);
+ 
   useEffect(() => {
     const handleWindowResize = () => {
       let width = window.innerWidth <= 1200;
@@ -28,11 +28,12 @@ const Poems = () => {
         visible={isVisible}
         show={setVisibility}
         sideTitle={data.sideTitle}
+        linkClicked={setClicked}
         pagedata={pagedata}
       />
-      <section>
+      <section className="poems_page">
         {pagedata.map((poem, index) => (
-          <div key={index} className="card_poems" id={poem.id}>
+          <div key={index} className={`${isClicked ? "card_poems-move" : "card_poems"}`} id={poem.id}>
             <CardPoems title={poem.name} text={poem.text} />
           </div>
         ))}
