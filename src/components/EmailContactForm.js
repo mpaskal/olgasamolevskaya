@@ -1,65 +1,75 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
-//import emailjs from 'emailjs-com';
-import { send } from 'emailjs-com';
+import emailjs from 'emailjs-com';
+import { Form, Input, TextArea, Button } from 'semantic-ui-react';
+import Swal from 'sweetalert2';
 
-const EmailContactForm = () => {
-    const [email, setEmail] = useState({to_email: 'mpaskal2000@gmail.com', from_email: '', from_name: '', message: ''});
+const SERVICE_ID = "service_a730kxo";
+const TEMPLATE_ID = "template_x8gn677";
+const USER_ID = "R65UY0wRBH2tmKunK";
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setEmail({ ...email, [name]: value });
-    }
- 
-   const handleSend = (e) => {
-    e.preventDefault();
-    send(
-        'service_a730kxo',
-        'template_x8gn677',
-        email,
-        'R65UY0wRBH2tmKunK'
-        )
-    .then(() => {
-        alert(`Thank you for reaching out! We will get back to you as soon as possible.`);
-    })
-    .catch((err) => {
-        alert(`We're sorry, this email could not be sent.`);
-    });
-};
+const EmailContactForm  = () => {
+    const handleSend = (e) => {
+      e.preventDefault();
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        .then((result) => {
+          console.log(result.text);
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent Successfully'
+          })
+        }, (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: 'error',
+            title: 'Ooops, something went wrong',
+            text: error.text,
+          })
+        });
+      e.target.reset()
+    };
 
  return (
-    <div className='form-container'>
-            <form onSubmit={handleSend}>  
-                <div>
-                    <label className='form-label'>
-                        Name:
-                        <br />
-                        <input className='form-input' name='from_name' type='text' defaultValue={''} required onChange={handleChange} />
-                    </label>
-                    <br />
-                    <label className='form-label'>
-                        Email address:
-                        <br />
-                        <input className='form-input' name='from_email' type='email' defaultValue={''} required onChange={handleChange} />
-                    </label>
-                    <br />
-                    <label className='form-label'>
-                        Subject:
-                        <br />
-                        <input className='form-input' name='subject' defaultValue={''} required onChange={handleChange} />
-                    </label>
-                    <br />
-                    <label className='form-label'>
-                        Message:
-                        <br />
-                        <textarea className='form-input' name='message' defaultValue={''} onChange={handleChange} />
-                    </label>
-                </div>
-                <div className='buttons-container'>
-                    <Button type='submit' className='form-button'>Send</Button>
-                </div>
-            </form>
-        </div>
+    <div className='contact_form'>
+        <Form onSubmit={handleSend}>  
+        <Form.Field
+          id='form-input-control-last-name'
+          control={Input}
+          label='Name'
+          name='user_name'
+          placeholder='Name…'
+          required
+          icon='user circle'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-control-email'
+          control={Input}
+          label='Email'
+          name='user_email'
+          placeholder='Email…'
+          required
+          icon='mail'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-control-subject'
+          control={Input}
+          label='Subject'
+          name='subject'
+          placeholder='Subject…'
+          required
+        />
+        <Form.Field
+          id='form-textarea-control-opinion'
+          control={TextArea}
+          label='Message'
+          name='message'
+          placeholder='Message…'
+          required
+        />
+        <Button type='submit' color='#a33201'>Submit</Button>
+      </Form>
+    </div>
  );
 };
 

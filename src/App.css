@@ -294,8 +294,28 @@
 .contacts {
   position: relative;
   min-height: 100vh;
-  margin: 0.3rem 1rem 0 0;
+  margin: 5% 25% 0 25%;
   width: auto;
+}
+
+.contact {
+  display: flexbox;
+  min-height: 30%;
+  color: #a33201;
+  padding: 2rem 0 2rem 0;
+  background-color: #c1ba6c;
+}
+
+.contact_form {
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 /* -- Navigation -- */
