@@ -4,11 +4,11 @@ import Sidebar from "../components/Sidebar";
 import pagedata from "../assets/data/PoemsData";
 
 const Poems = () => {
-  let scroll = 0;
   const [isVisible, setVisibility] = useState(true);
   const data = {
     sideTitle: "Зміст",
   };
+  
   let [isClicked, setClicked] = useState(false);
   function handleClick() {
     setClicked("true");
@@ -19,7 +19,6 @@ const Poems = () => {
       let width = window.innerWidth <= 1200;
       setVisibility(!width);
     };
-
     window.addEventListener('resize', handleWindowResize);
     return () => {
       window.removeEventListener('resize', handleWindowResize);

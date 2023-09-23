@@ -12,7 +12,7 @@ const Navigation = ({ visible, show }) => {
       variant="dark"
       bg="dark"
     >
-      <Container>
+
         <img className="logo-img" src={ImageOlgaLogo} alt="Olga Samolevskaya" />
         <NavLink className="nav-link" end to="/">
           <Navbar.Brand className="logo-link">
@@ -39,7 +39,7 @@ const Navigation = ({ visible, show }) => {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      
     </Navbar>
   );
 };

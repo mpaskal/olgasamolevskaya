@@ -1,3 +1,7 @@
+:root {
+  
+}
+
 /* -- Keyframes -- */
 @keyframes fade-in-from-top {
   0% {
@@ -46,7 +50,8 @@
 
 .home {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
+  max-height: auto;
   width: auto;
   margin: 1rem 1rem 80px 1rem;
 }
@@ -301,9 +306,12 @@
 .contact {
   display: flexbox;
   min-height: 30%;
-  color: #a33201;
   padding: 2rem 0 2rem 0;
   background-color: #c1ba6c;
+}
+
+.contact h1 {
+  color: #a33201;
 }
 
 .contact_form {
@@ -380,7 +388,15 @@ Form {
   animation: fade-in-from-top 0.5s;
 }
 
- .nav-link:hover {
+.nav-link a {
+  border-bottom: 0.2rem solid transparent;
+}
+
+.nav-link a active {
+  border-color: var(--main-color);
+}
+
+.nav-link:hover {
   background-color: #db6c3c;
   justify-content: center;
   display: flex;
@@ -784,6 +800,7 @@ section.sidebar_links {
 
 /* -- Footer -- */
 .footer {
+  display: flexbox;
   padding-top: 0.5rem;
   color: #f4f0e8;
   background: linear-gradient(0deg, #f4f0e8,
@@ -796,6 +813,7 @@ section.sidebar_links {
         #f4f0e8);
   height: 90px;
   width: auto;
+  bottom: 0;
 }
 
 .singleCol {

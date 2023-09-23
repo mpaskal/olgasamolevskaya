@@ -29,8 +29,7 @@ const Articles = () => {
                 .filter((a) => a.year.includes(publishedYear))
                 .map((article, index) => (
                   <CardArticles
-                    key={index}
-                    className="card_articles"
+                    key={index}      
                     id={article.id}
                     title={article.title}
                     image={article.image}
