@@ -491,7 +491,7 @@ section.sidebar_links {
    transition: transform .5s;
    animation: fade-in-from-left 0.5s;
    z-index: 5;
-  background: linear-gradient(90deg,
+   background: linear-gradient(90deg,
         #E0C9A6,
         #E0C9A6)
  }
